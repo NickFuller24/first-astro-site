@@ -1,13 +1,13 @@
 ---
 import { Image } from 'astro:assets';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/golf-logo.png';
 
+// TODO: Update navigation items and links as needed
 const navItems = [
-  { label: 'Solution', href: '#' },
-  { label: 'Who We Help', href: '#' },
-  { label: 'Outcomes', href: '#' },
-  { label: 'Company', href: '#' },
-  { label: 'Resources', href: '#' },
+  { label: 'Course', href: '#' },
+  { label: 'Practice', href: '#' },
+  { label: 'Lessons', href: '#' },
+  { label: 'About', href: '#' }
 ];
 ---
 
@@ -21,7 +21,7 @@ const navItems = [
         width={48}
         height={48}
       />
-      <span class="ml-2">Your Company</span>
+      <span class="ml-2">Milt's Golf Center</span>
     </a>
     <nav class="hidden md:flex space-x-6">
       {navItems.map(item => (

@@ -4,10 +4,10 @@ import logoImg from '../assets/golf-logo.png';
 
 // TODO: Update navigation items and links as needed
 const navItems = [
-  { label: 'Course', href: '#' },
-  { label: 'Practice', href: '#' },
-  { label: 'Lessons', href: '#' },
-  { label: 'About', href: '#' }
+  { label: 'Course', href: '#course' },
+  { label: 'Practice', href: '#practice' },
+  { label: 'Prices', href: '#prices' },
+  { label: 'Hours', href: '#hours' }
 ];
 ---
 
@@ -25,13 +25,10 @@ const navItems = [
     </a>
     <nav class="hidden md:flex space-x-6">
       {navItems.map(item => (
-        <a href={item.href} class="text-gray-700 hover:text-primary-500 transition duration-150 ease-in-out">
+        <a href={item.href} class="text-gray-700 hover:text-primary-lightGreen transition duration-150 ease-in-out">
           {item.label}
         </a>
       ))}
     </nav>
-    <a href="/#" class="bg-primary-500 text-white px-4 py-2 rounded hover:bg-primary-600 transition duration-150 ease-in-out">
-      Contact Us
-    </a>
   </div>
 </header>

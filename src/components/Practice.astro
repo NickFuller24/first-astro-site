@@ -1,0 +1,32 @@
+---
+const steps = [
+  {
+    icon: 'M96 416h224c0 17.7-14.3 32-32 32h-16c-17.7 0-32 14.3-32 32v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-20c0-17.7-14.3-32-32-32h-16c-17.7 0-32-14.3-32-32zm320-208c0 74.2-39 139.2-97.5 176h-221C39 347.2 0 282.2 0 208 0 93.1 93.1 0 208 0s208 93.1 208 208zm-180.1 43.9c18.3 0 33.1-14.8 33.1-33.1 0-14.4-9.3-26.3-22.1-30.9 9.6 26.8-15.6 51.3-41.9 41.9 4.6 12.8 16.5 22.1 30.9 22.1zm49.1 46.9c0-14.4-9.3-26.3-22.1-30.9 9.6 26.8-15.6 51.3-41.9 41.9 4.6 12.8 16.5 22.1 30.9 22.1 18.3 0 33.1-14.9 33.1-33.1zm64-64c0-14.4-9.3-26.3-22.1-30.9 9.6 26.8-15.6 51.3-41.9 41.9 4.6 12.8 16.5 22.1 30.9 22.1 18.3 0 33.1-14.9 33.1-33.1z', // Placeholder SVG path for the first icon
+    description: '300 yard driving range with mats and natural grass areas',
+    viewBox: '0 0 512 512',
+    fill: 'currentColor'
+  },
+  {
+    icon: 'M12,21c-6.28,0-8-1.6-8-3.53C4,15,6.81,13.93,9.33,13.93c3.49,0,4.45-.93,6.23-.93C18.8,13,20,14.56,20,16.56,20,19.22,17.33,21,12,21ZM9,3V16m6-9L9,10V4Z', // Placeholder SVG path for the second icon
+    description: 'Chipping and putting greens',
+    viewBox: '0 0 24 24',
+    fill: 'none'
+  }
+];
+---
+
+<section class="py-20 bg-white" id="practice">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-serif font-bold text-center mb-16">Practice Areas</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {steps.map((step, index) => (
+        <div class="bg-gray-50 p-8 rounded-lg text-center" id={`step-${index.toString()}`}>
+          <svg class="w-16 h-16 mx-auto mb-6 text-primary-lightGreen" fill={step.fill} viewBox={step.viewBox} stroke="currentColor">
+            <path stroke-linecap="round" stroke-inejoin="round" stroke-width={2} d={step.icon} />
+          </svg>
+          <p class="text-gray-700">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

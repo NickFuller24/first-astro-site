@@ -6,9 +6,10 @@ export const theme = {
   extend: {
     colors: {
       primary: {
-        100: '#E6F0FF',
-        500: '#0066CC',
-        600: '#0052A3',
+        white: '#f2fff0ff',
+        gray: '#bbc5baff',
+        lightGreen: '#168200ff',
+        darkGreen: '#0c4600ff',
       },
     },
     fontFamily: {
